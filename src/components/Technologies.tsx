@@ -74,7 +74,7 @@ const Technologies = ({boolLocation}:any) => {
     boolLocation.svelte?<div  className=' bg-gradient-to-r from-orange-600 to-white m-1 p-1 inline-block shadow-custom rounded-md cursor-pointer '>Svelte <i className="lni text-orange-600 lni-svelte"></i></div>:null
 }
 {
-    boolLocation.firebase?<div  className=' bg-gradient-to-r from-orange-300 flex h-8 to-blue-400 m-1 p-1 rounded-md cursor-pointer '>Firebase <i className="lni text-orange-300 lni-firebase"></i></div>:null
+    boolLocation.firebase?<div  className=' bg-gradient-to-r shadow-custom from-orange-300 flex h-8 to-blue-400 m-1 p-1 rounded-md cursor-pointer '>Firebase <i className="lni text-orange-300 lni-firebase"></i></div>:null
 }
 {
     boolLocation.mongodb?<div className=' bg-gradient-to-r from-green-700 to-white m-1 p-1 inline-block rounded-md cursor-pointer '>MongoDB <i className="lni text-green-700 lni-mongodb"></i></div>:null

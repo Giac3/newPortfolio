@@ -18,7 +18,7 @@ const Card = ({imagen}:any) => {
   });
   return (
     <animated.div
-    className="bg-purple-200 w-[300px] border-2 border-white p-2 rounded-md"
+    className="bg-blue-400 w-[300px] border-2 border-white p-2 rounded-md"
     style={props3}
     onMouseEnter={() => setShown(true)}
     onMouseLeave={() => setShown(false)}
@@ -38,12 +38,12 @@ const Card = ({imagen}:any) => {
     </div>
     <div className="flex flex-row">
     <div>
-    <div className=" w-56 h-64 border-2 mb-4 flex bg-green-100 items-center border-white rounded-3xl">
+    <div className=" w-56 h-64 border-2 mb-4 flex items-center border-white rounded-3xl">
         <p className="-rotate-90 w-64 h-50  relative rounded-md p-1 font-display text-xs bg-red-200 shadow-md">{imagen.description}</p>
     </div>
-    <div className=" w-56 h-64 border-2 flex items-center justify-center border-white rounded-md shadow-inner bg-blue-100">
+    <div className=" w-56 h-64  flex items-center justify-center  rounded-md  ">
         
-        <img src={imagen.image} className="-rotate-90 w-[220px] h-[230px] scale-[1.1] rounded-md  "/>
+        <img src={imagen.image} className="-rotate-90 w-[230px] h-[230px]   scale-[1.1] rounded-md  "/>
     </div>
     </div>
     <div className=" w-20 h-[530px] border-2 flex items-center  ml-2 border-white rounded-md">

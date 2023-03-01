@@ -5,6 +5,7 @@ import Carousel2 from '../components/Carousel2';
 import voicegpt from '../assets/voicegpt.png'
 import spark from '../assets/spark.png'
 import codek from '../assets/codek.png'
+import quizzle from '../assets/quizzle.png'
 import { motion } from 'framer-motion';
 
 import { AiFillHome} from 'react-icons/ai'
@@ -169,6 +170,42 @@ const researchInfo = {
 
 }
 
+const quizzleInfo = {
+  image: quizzle,
+  title: "Quizzle",
+  description: "Quizzle is a full stack web application quiz game. The game works by connecting everyone to the same timed stream of questions where the question changes every 30 seconds. Everyone gets the same question and they gain/lose points depending on the question difficulty. Scores are stored in a database for all users. ",
+  link: "https://quizzle.it/",
+  gitLink: "https://github.com/Giac3/Quizzle",
+  tech: {
+    javascript: false,
+    react: true,
+    node: true,
+    html: false,
+    css:  false,
+    python: false,
+    php: false,
+    aws: false,
+    laravel: false,
+    angular: false,
+    vue: false,
+    git: true,
+    docker: false,
+    java: false,
+    figma: false,
+    linux: false,
+    rust: false,
+    apple: false,
+    windows: false,
+    typescript: true,
+    svelte:false,
+    firebase: true,
+    mongodb: false,
+    mysql: false,
+    tailwind: true,
+  }
+
+}
+
 function useOnScreen(ref: RefObject<Element>) {
 
   const [isIntersecting, setIntersecting] = useState(false)
@@ -219,6 +256,12 @@ const Work = ({aboutRef, homeRef, workRef, contactRef}:any) => {
       key: uuidv4(),
       content: (
         <Card imagen={researchInfo} />
+      )
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card imagen={quizzleInfo} />
       )
     },
 
