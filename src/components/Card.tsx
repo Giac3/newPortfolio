@@ -18,7 +18,7 @@ const Card = ({imagen}:any) => {
   });
   return (
     <animated.div
-    className="bg-blue-400 w-[300px] border-2 border-white p-2 rounded-md"
+    className="bg-blue-200 w-[300px] border-2 border-white p-2 rounded-md"
     style={props3}
     onMouseEnter={() => setShown(true)}
     onMouseLeave={() => setShown(false)}
