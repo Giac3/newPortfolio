@@ -282,7 +282,7 @@ const Work = ({aboutRef, homeRef, workRef, contactRef}:any) => {
       </div>
       <div className='rotate-90'>
         
-      <motion.div  ref={visRef}  initial={{scale:0}} animate={{scale: isVisible? 1 : 0}} transition={{duration:1, delay:0.3}} className='w-screen h-screen flex items-center justify-center'>
+      <motion.div  ref={visRef}  initial={{scale:0}} animate={{scale: isVisible? 1 : 0}} transition={{duration:1, delay:0.3}} className='w-screen h-10 flex items-center justify-center'>
       <Carousel2
         cards={cards}
         height="500px"
