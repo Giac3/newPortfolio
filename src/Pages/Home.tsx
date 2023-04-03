@@ -91,78 +91,147 @@ const Home = ({aboutRef,homeRef, workRef, contactRef}:any) => {
     <div ref={homeRef} className='bg-[#B9DFF4] w-screen overflow-x-hidden overflow-hidden gap-3 flex-col h-screen flex items-center justify-center'>
       
       <div className=' overflow-hidden relative w-screen h-screen'>
+      <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
       <motion.img
       initial={{translateX:-300, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:40, ease:"linear"}}
        src={cloud1} className=" absolute scale-75 top-0 left-0"/>
+</motion.div>
 
+<motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-300, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:30, ease:"linear", repeat:Infinity}}
        src={cloud2} className=" absolute scale-75 top-20 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-500, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:50, ease:"linear", repeat:Infinity}}
        src={cloud3} className=" absolute scale-75 top-40 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-100, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:50, ease:"linear"}}
        src={cloud4} className=" absolute scale-75 top-40 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:400, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:50, ease:"linear"}}
        src={cloud5} className=" absolute scale-75 top-20 left-0"/>
-
+</motion.div>
+<motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:700, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:35, ease:"linear"}}
        src={cloud2} className=" absolute scale-75 top-12 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-800, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:55, ease:"linear", repeat:Infinity}}
        src={cloud2} className=" absolute scale-75 top-12 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-900, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:50, ease:"linear", repeat:Infinity}}
        src={cloud2} className=" absolute scale-75 top-32 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-1300, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:60, ease:"linear", repeat:Infinity}}
        src={cloud2} className=" absolute scale-75 top-32 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-1300, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:70, ease:"linear", repeat:Infinity}}
        src={cloud2} className=" absolute scale-75 top-12 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-600, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:42, ease:"linear", repeat:Infinity}}
        src={cloud4} className=" absolute scale-75 top-40 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-600, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:30, ease:"linear", repeat:Infinity}}
        src={cloud1} className=" absolute scale-75 top-40 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-900, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:28, ease:"linear", repeat:Infinity}}
        src={cloud3} className=" absolute scale-75 top-12 left-0"/>
+       </motion.div>
+       <motion.div 
+      initial={{scale:0}}
+      animate={{scale:1}}
+      >
 <motion.img
       initial={{translateX:-900, scale: 0.6}}
       animate={{translateX:1500, scale: 0.6}}
       transition={{duration:34, ease:"linear", repeat:Infinity}}
        src={cloud4} className=" absolute scale-75 top-40 left-0"/>
+       </motion.div>
        </div>
        
        <div className='absolute items-center justify-center flex flex-col  gap-2 '>
