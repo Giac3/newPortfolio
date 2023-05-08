@@ -72,10 +72,10 @@ const Contact = ({aboutRef, homeRef, workRef, contactRef}:any) => {
   };
 
   return (
-    <div ref={contactRef} className='w-screen h-screen bg-purple-200 top-0 sticky flex items-center'>
+    <div ref={contactRef} className='w-screen  bg-purple-200 h-[100%]  flex items-center'>
       
       <div className='w-screen h-screen flex flex-col gap-10 items-center justify-center'>
-      <div className=' absolute z-20 top-20 flex items-center'>
+      <div className='flex items-center'>
         <motion.button onClick={() => {homeRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{width:100}} className='w-10 group h-10 m-2 flex items-center justify-center bg-rose-50 rounded-full shadow-custom'> <AiFillHome className='scale-[1.3] group-hover:-translate-x-8 duration-100 '/> <img className='opacity-0 absolute group-hover:opacity-100 duration-[0.05] scale-[0.4] ml-5 mt-1' src={home2}/> </motion.button>
         <motion.button onClick={() => {aboutRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{width:100}} className='w-10 group h-10 m-2 flex items-center justify-center bg-green-50 rounded-full shadow-custom'> <GrContactInfo className='scale-[1.3] group-hover:-translate-x-8 duration-100 '/> 
         <img className='opacity-0 absolute group-hover:opacity-100 duration-[0.05] scale-[0.37] ml-5 mt-1' src={about2}/> </motion.button>

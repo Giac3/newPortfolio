@@ -268,31 +268,8 @@ const Work = ({aboutRef, homeRef, workRef, contactRef}:any) => {
   ];
 
   return (
-    <div ref={workRef} className='w-screen bg-blue-200 justify-center   h-screen top-0 sticky flex items-center'>
-      <div className=' absolute z-20 top-20 flex items-center'>
-        <motion.button onClick={() => {homeRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{width:100}} className='w-10 group h-10 m-2 flex items-center justify-center bg-rose-50 rounded-full shadow-custom'> <AiFillHome className='scale-[1.3] group-hover:-translate-x-8 duration-100 '/> <img className='opacity-0 absolute group-hover:opacity-100 duration-[0.05] scale-[0.4] ml-5 mt-1' src={home2}/> </motion.button>
-        <motion.button onClick={() => {aboutRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{width:100}} className='w-10 group h-10 m-2 flex items-center justify-center bg-green-50 rounded-full shadow-custom'> <GrContactInfo className='scale-[1.3] group-hover:-translate-x-8 duration-100 '/> 
-        <img className='opacity-0 absolute group-hover:opacity-100 duration-[0.05] scale-[0.37] ml-5 mt-1' src={about2}/> </motion.button>
-        <motion.button  whileHover={{width:100}} className='w-10 group h-10 m-2 flex items-center justify-center bg-blue-50 border-2 border-purple-300 rounded-full shadow-custom'> 
-        <img className='opacity-0 absolute group-hover:opacity-100 duration-[0.05] scale-[0.4] ml-5 mt-1' src={work2}/> 
-        <MdOutlineWork className='scale-[1.3] group-hover:-translate-x-8 duration-100 '/> </motion.button>
-        <motion.button onClick={() => {contactRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{width:100}} className='w-10 group h-10 m-2 flex items-center justify-center bg-purple-50 rounded-full shadow-custom'> 
-        <img className='opacity-0 absolute group-hover:opacity-100 duration-[0.05] scale-[0.32] ml-7 mt-1' src={contact2}/>
-        <GrContact className='scale-[1.3] group-hover:-translate-x-8 duration-100 '/> </motion.button>
-      </div>
-      <div className='rotate-90'>
-        
-      <motion.div  ref={visRef}  initial={{scale:0}} animate={{scale: isVisible? 1 : 0}} transition={{duration:1, delay:0.3}} className='w-screen h-10 flex items-center justify-center'>
-      <Carousel2
-        cards={cards}
-        height="500px"
-        width="30%"
-        margin="0 auto"
-        offset={2}
-        showArrows={false}
-      />
-      </motion.div>
-      </div>
+    <div ref={workRef} className='w-screen bg-blue-200 justify-center flex-col  h-[100%] flex items-center'>
+      <div className='w-screen h-screen bg-blue-100'></div>
     </div>
   )
 }

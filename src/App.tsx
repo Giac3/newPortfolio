@@ -17,7 +17,7 @@ const App: React.FC = () => {
 history.scrollRestoration ='manual'
 
   return (
-    <div className='flex-col overflow-hidden  scrollbar-hidden h-[100%] w-[100%]   items-center justify-center flex '> 
+    <div className=' '> 
     
     <Home aboutRef={aboutRef} homeRef={homeRef} workRef={workRef} contactRef={contactRef}/>
     <About aboutRef={aboutRef} homeRef={homeRef} workRef={workRef} contactRef={contactRef}/>
