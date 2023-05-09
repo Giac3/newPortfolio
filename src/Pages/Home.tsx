@@ -99,7 +99,7 @@ const Home = ({aboutRef,homeRef, workRef, contactRef}:any) => {
           sequence2();
           sequence3();
           sequence4();
-        }, 5000);
+        }, 3000);
       }, []);
 
       

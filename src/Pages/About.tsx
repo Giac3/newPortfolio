@@ -36,6 +36,7 @@ const About = ({aboutRef, homeRef, workRef, contactRef}:any) => {
   const [showVscode, setShowVscode] = useState(false)
   const [showVite, setShowVite] = useState(false)
   const [showFirebase, setShowFirebase] = useState(false)
+  const [isLooking, setIsLooking] = useState(false)
   
 
 
@@ -71,19 +72,31 @@ const About = ({aboutRef, homeRef, workRef, contactRef}:any) => {
         <SiGithub className='scale-150 text-gray-600'/>
         </a>
           </div>
+          
+          </div>
+          
           </div>
           </div>
-          </div>
+        </div>
+        <div className='bg-purple-300 grid grid-cols-2 grid-rows-2 p-1 z-20 rounded-md w-[110px] aspect-square'>
+        <motion.button onClick={() => {homeRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{scale:1.1}} className='w-10 group h-10 m-2 flex items-center justify-center bg-rose-50 rounded-full shadow-custom'> <AiFillHome className='scale-[1.3] duration-100 '/> </motion.button>
+        <motion.button  whileHover={{scale:1.1}} className='w-10 cursor-default  group h-10 m-2 flex items-center justify-center bg-green-50 rounded-full shadow-custom'> <GrContactInfo className='scale-[1.3] duration-100 '/> 
+        </motion.button>
+        <motion.button onClick={() => {workRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{scale:1.1}} className='w-10 group h-10 m-2 flex items-center justify-center bg-blue-50 rounded-full shadow-custom'> 
+        <MdOutlineWork className='scale-[1.3]  duration-100 '/> </motion.button>
+        <motion.button onClick={() => {contactRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{scale:1.1}} className='w-10 border-2 group h-10 m-2 flex items-center justify-center bg-purple-50 rounded-full shadow-custom'> 
+        <GrContact className='scale-[1.3] duration-100 '/> </motion.button>
         </div>
         </div>
         <div className='w-screen  h-screen flex items-center justify-center absolute'>
-          <Canvas  dpr={[1, 2]} shadows={{ autoUpdate: true }} camera={{ fov: 45, position: [10, 2, 3] }}>
+        <motion.div initial={{opacity:1}} animate={{opacity: isLooking ? 0 : 1}} transition={{duration:1}} className=' text-white font-display absolute bottom-0 text-xl'>Hey, have a look around the planet</motion.div>
+          <Canvas onClick={() => {setIsLooking(true)}}  dpr={[1, 2]} shadows={{ autoUpdate: true }} camera={{ fov: 45, position: [10, 2, 3] }}>
             <ambientLight intensity={0.5} />
             <OrbitControls maxDistance={10} minDistance={3}/>
             <Stars/>
             <Planet/>
             <Rocket/>
-            <Box position={[-0.2,0.3,1.1]}/>
+            <Box position={[-0.2,0.3,1.06]}/>
           </Canvas>
         </div>
       </div>
