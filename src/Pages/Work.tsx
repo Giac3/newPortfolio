@@ -17,6 +17,9 @@ import work2 from '../assets/work2.svg'
 import contact2 from '../assets/contact2.svg'
 import gptmail from '../assets/gptmail.png'
 import research from '../assets/research.png'
+import { Canvas } from '@react-three/fiber';
+import { Environment, OrbitControls, Stars } from '@react-three/drei';
+import Hanger from '../components/hanger';
 
 const voicgptInfo = {
   image: voicegpt,
@@ -224,52 +227,29 @@ function useOnScreen(ref: RefObject<Element>) {
 }
 
 const Work = ({aboutRef, homeRef, workRef, contactRef}:any) => {
-  const visRef = useRef<HTMLDivElement>(null)
-  const isVisible = useOnScreen(workRef)
-
-  let cards = [
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen={sparkInfo} />
-      )
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen={voicgptInfo} />
-      )
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen={codekInfo} />
-      )
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen={gptmailInfo} />
-      )
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen={researchInfo} />
-      )
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card imagen={quizzleInfo} />
-      )
-    },
-
-  ];
 
   return (
     <div ref={workRef} className='w-screen bg-blue-200 justify-center flex-col  h-[100%] flex items-center'>
-      <div className='w-screen h-screen bg-blue-100'></div>
+      
+      <div className='w-screen h-screen bg-black'>
+      <div className='bg-purple-300 grid absolute grid-cols-2 grid-rows-2 p-1 z-20 m-1 rounded-md w-[110px] aspect-square'>
+        <motion.button onClick={() => {homeRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{scale:1.1}} className='w-10 group h-10 m-1 flex items-center justify-center bg-rose-50 rounded-full shadow-custom'> <AiFillHome className='scale-[1.3] duration-100 '/> </motion.button>
+        <motion.button onClick={() => {aboutRef.current.scrollIntoView({behavior: "smooth"})}}  whileHover={{scale:1.1}} className='w-10 cursor-default  group h-10 m-1 flex items-center justify-center bg-green-50 rounded-full shadow-custom'> <GrContactInfo className='scale-[1.3] duration-100 '/> 
+        </motion.button>
+        <motion.button  whileHover={{scale:1.1}} className='w-10 group h-10 m-1 flex items-center justify-center bg-blue-50 rounded-full shadow-custom'> 
+        <MdOutlineWork className='scale-[1.3]  duration-100 '/> </motion.button>
+        <motion.button onClick={() => {contactRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{scale:1.1}} className='w-10 border-2 group h-10 m-1 flex items-center justify-center bg-purple-50 rounded-full shadow-custom'> 
+        <GrContact className='scale-[1.3] duration-100 '/> </motion.button>
+        </div>
+      <Canvas dpr={[1, 2]} shadows={{ autoUpdate: true }} camera={{ fov: 45, position: [100, 15, 20] }}>
+            <ambientLight intensity={1} />
+            <Stars/>
+            <directionalLight position={[0,3,24]} intensity={4}/>
+            <Environment preset="night"/>
+            <OrbitControls />
+            <Hanger/>
+          </Canvas>
+      </div>
     </div>
   )
 }
