@@ -30,7 +30,7 @@ export default function Hanger({ rocketProps, padProps, reset, setCanReset }: an
     return (
       <group ref={group}>
         <primitive scale={5} object={scene} />
-        <Html distanceFactor={1} position={[0.913,2.74,1.06]} transform  rotation={[-.49,0,0]} >
+        <Html className='select-none' distanceFactor={1} position={[0.913,2.74,1.06]} transform  rotation={[-.49,0,0]} >
             <div className='bg-black w-[1336px] h-[800px]  fixed text-white'>
                 <Works/>
             </div>

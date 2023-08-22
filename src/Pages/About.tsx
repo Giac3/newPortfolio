@@ -94,6 +94,9 @@ const About = ({aboutRef, homeRef, workRef, contactRef}:any) => {
             <ambientLight intensity={0.5} />
             <OrbitControls maxDistance={10} minDistance={3}/>
             <Stars/>
+            <directionalLight position={[0,3,24]} intensity={0.4}/>
+            <directionalLight position={[0,3,-24]} intensity={0.4}/>
+            
             <Planet/>
             <Rocket/>
             <Box position={[-0.2,0.3,1.06]}/>

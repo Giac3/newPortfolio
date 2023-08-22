@@ -8,7 +8,7 @@ export default function Platform() {
 
   return (
     <mesh receiveShadow ref={ref}  rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
-      <planeBufferGeometry args={[10, 10]} />
+      <planeGeometry args={[10, 10]} />
       <meshStandardMaterial transparent={true}  opacity={0.5} alphaTest={1} />
     </mesh>
   );

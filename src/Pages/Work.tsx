@@ -233,6 +233,7 @@ const Work = ({aboutRef, homeRef, workRef, contactRef}:any) => {
       
       <div className='w-screen h-screen bg-black'>
       <div className='bg-purple-300 grid absolute grid-cols-2 grid-rows-2 p-1 z-20 m-1 rounded-md w-[110px] aspect-square'>
+
         <motion.button onClick={() => {homeRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{scale:1.1}} className='w-10 group h-10 m-1 flex items-center justify-center bg-rose-50 rounded-full shadow-custom'> <AiFillHome className='scale-[1.3] duration-100 '/> </motion.button>
         <motion.button onClick={() => {aboutRef.current.scrollIntoView({behavior: "smooth"})}}  whileHover={{scale:1.1}} className='w-10 cursor-default  group h-10 m-1 flex items-center justify-center bg-green-50 rounded-full shadow-custom'> <GrContactInfo className='scale-[1.3] duration-100 '/> 
         </motion.button>
@@ -240,15 +241,19 @@ const Work = ({aboutRef, homeRef, workRef, contactRef}:any) => {
         <MdOutlineWork className='scale-[1.3]  duration-100 '/> </motion.button>
         <motion.button onClick={() => {contactRef.current.scrollIntoView({behavior: "smooth"})}} whileHover={{scale:1.1}} className='w-10 border-2 group h-10 m-1 flex items-center justify-center bg-purple-50 rounded-full shadow-custom'> 
         <GrContact className='scale-[1.3] duration-100 '/> </motion.button>
+        
         </div>
+
       <Canvas dpr={[1, 2]} shadows={{ autoUpdate: true }} camera={{ fov: 45, position: [100, 15, 20] }}>
-            <ambientLight intensity={1} />
+
+            <ambientLight intensity={0.2} />
             <Stars/>
-            <directionalLight position={[0,3,24]} intensity={4}/>
-            <Environment preset="night"/>
-            <OrbitControls />
+            <directionalLight position={[0,-3,4]} intensity={0.9}/>
+            
+            <OrbitControls maxDistance={80} minDistance={3} />
             <Hanger/>
-          </Canvas>
+
+      </Canvas>
       </div>
     </div>
   )

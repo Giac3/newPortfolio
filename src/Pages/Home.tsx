@@ -362,7 +362,7 @@ colorInterpolationFilters="sRGB">
 <Canvas dpr={[1, 2]} shadows={{ autoUpdate: true }} camera={{ fov: 45}}>
   <Suspense fallback={null}>
     <Physics>
-      <Stage >
+      <Stage>
         <Model
         reset={reset}
           rocketProps={{ scale: 0.3}}
